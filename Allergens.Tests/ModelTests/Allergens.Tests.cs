@@ -4,33 +4,15 @@ using Allergens;
 namespace Allergens.Tests
 {
   [TestClass]
-  public class LeapYearTests
+  public class AllergenTests
   {
     [TestMethod]
-    public void IsLeapYear_NumberDivisibleByFour_True()
+    public void IsAllergen_Eggs_True()
     {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2012));
-    }
-
-    [TestMethod]
-    public void IsLeapYear_NumberNotDivisibleByFour_False()
-    {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(false, testLeapYear.IsLeapYear(1999));
-    }
-
-    [TestMethod]
-    public void IsLeapYear_MultiplesOfOneHundred_False()
-    {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(false, testLeapYear.IsLeapYear(1900));
-    }
-    [TestMethod]
-    public void IsLeapYear_MultiplesOfFourHundred_True()
-    {
-      LeapYear testLeapYear = new LeapYear();
-      Assert.AreEqual(true, testLeapYear.IsLeapYear(2000));
+      {
+    Allergen testAllergen = new Allergen();
+    Assert.AreEqual(BigBookOfAllergens[1], testAllergen.IsAllergen("eggs"));
+  }
     }
   }
 }
